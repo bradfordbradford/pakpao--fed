@@ -2,7 +2,7 @@
 
 # Ristretto 
 
-#### A Starter Kit & Styleboard
+#### A Starter Kit & Style Board
 Eye opening essentials to get you up and out the door in a hurry. Ristretto is a straight shot of essentials with lush overtones of typography and semantic markup. 
 
 Powerful. Lightweight. Ristretto.
