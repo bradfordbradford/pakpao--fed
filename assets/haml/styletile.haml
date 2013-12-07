@@ -1,0 +1,151 @@
+!!! 5
+
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+-# <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+-# <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+-# <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+-# <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+%html.no-js{:lang => "en"}
+
+    %head
+
+        %meta{:charset => "utf-8"}
+
+        %title Style Tile
+        %meta{:name => "description", :content => ""}
+        -# %meta{:name => "keywords", :content => ""}
+        -# %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+        -# RSS
+        -# %link{:rel => "alternate", :type => "application/rss+xml", :title => "RSS", :href => "http://feeds.feedburner.com/FEEDNAME"}
+
+        -# Favicon
+        %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+        -# CSS
+        %link{:rel => "stylesheet", :href => "/assets/css/site.css"}
+
+        -# /[if (lt IE 9) & (!IEMobile)]
+            %script{:src => "/assets/js/libs/selectivizr.min.js"}
+            -# %link{:rel => "stylesheet", :href => "/css/ie8.css"}
+
+        -# Typekit
+        %script{:src => "http://use.typekit.com/ahk2bse.js"}
+        %script
+            try{Typekit.load();}catch(e){}
+
+        -# Modernizr
+        %script{:src => "/assets/js/libs/modernizr-2.6.2.min.js"}
+
+    %body.styletile
+
+        #site-wrap
+
+            %header.site-header
+                .wrap-inner
+                    %h3.name Client Name
+                    %p.note Version 1.0
+
+
+            #content-wrap
+
+                %section#hero
+                    .hero-bg
+                        %header
+                            %h2.hero-title A Style Tile
+
+                %section#colors
+                    %header.wrap-inner
+                        %h3 Colors
+                    %ul.nobullet.row
+                        %li.primary
+                        %li.secondary
+                        %li.tertiary
+                        %li.alert
+
+
+
+                %section#patterns
+                    %header.wrap-inner
+                        %h3 Paterns
+                    %ul.nobullet.row
+                        %li.primary
+                        %li.secondary
+
+
+                %section#buttons.wrap-inner
+                    %ul.nobullet.row
+                        .split-column
+                            %h3 Buttons
+
+                            %a.primary.btn{:href => "#"} Primary Button
+                            %a.secondary.btn{:href => "#"} Secondary Button
+                            %a.tertiary.box.btn{:href => "#"} Tertiary Button
+
+                        .split-column
+                            %h3 Links
+
+                            %a{:href => "#"} View More
+
+
+                %section#typography.wrap-inner
+                    .split-column
+
+                        %article
+                            %header
+                                %h2 Article Title
+                                %h3  Title Subtext
+
+                            %section.article-body
+                                %p
+                                    Events during his presidency included the Bay of Pigs Invasion, the Cuban Missile Crisis, the Space Race—by initiating Project Apollo (which would culminate in the moon landing), the building of the Berlin Wall, the African-American Civil Rights Movement, and early stages of the Vietnam War. Therein, Kennedy increased the number of military advisers, special operation forces, and helicopters in an effort to curb the spread of communism in South East Asia.[5] The Kennedy administration adopted the policy of the Strategic Hamlet Program which was implemented by the South Vietnamese government. It involved certain forced relocation, village internment, and segregation of rural South Vietnamese from northern and southern communist insurgents.[6]
+
+                                %h4
+                                    Kennedy was assassinated on November 22, 1963, in Dallas, Texas.
+                                %p
+                                    Lee Harvey Oswald was accused of the crime and arrested that evening, but Jack Ruby shot and killed him two days later, before a trial could take place.
+
+                                %br/
+                                %img{:src => "/assets/img/superfamous.jpg", :alt => ""}/
+                                %br/
+                                %br/
+
+                                %p
+                                    Lee Harvey Oswald was accused of the crime and arrested that evening, but Jack Ruby shot and killed him two days later, before a trial could take place. The FBI and the Warren Commission officially concluded that Oswald was the lone assassin. However, the United States House Select Committee on Assassinations (HSCA) concluded that those investigations were flawed and that Kennedy was probably assassinated as the result of a conspiracy.[7] Kennedy's controversial Department of Defense TFX fighter bomber program led to a Congressional investigation that lasted from 1963 to 1970.[8] Since the 1960s, information concerning Kennedy's private life has come to light. Details of Kennedy's health problems with which he struggled have become better known, especially since the 1990s. Although initially kept secret from the general public, reports of Kennedy's philandering have garnered much press. Kennedy ranks highly in public opinion ratings of U.S. presidents.[9]
+                    .split-column
+                        %ul
+                            %li.list-title
+                                Stylistic Keywords
+                            %li
+                                Bookish
+                            %li
+                                Typographic
+                            %li
+                                Elegant
+
+            %footer.site-footer
+                .wrap-inner
+                    .credits
+                        %a{:href => "http://wearetelegraph.com/"} Telegraph Creative
+                        %hr/
+                        %p Dallas, TX | 2013
+
+
+        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"}
+        // window.jQuery || document.write('<script src="/js/jquery-1.10.1.min.js"><\/script>')
+
+        -# Asynchronous Google Analytics
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+
+
+

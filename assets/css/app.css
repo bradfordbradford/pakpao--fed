@@ -1,0 +1,469 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
+/*
+* Scut, a collection of Sass utilities to ease and improve our implementations of common style-code patterns.
+* v0.5.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+
+#semantic-grid-example p {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+meta.foundation-mq-small {
+  font-family: "/only screen and (max-width: 40em)/";
+  width: 0em;
+}
+
+meta.foundation-mq-medium {
+  font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/";
+  width: 40.063em;
+}
+
+meta.foundation-mq-large {
+  font-family: "/only screen and (min-width:64.063em)/";
+  width: 64.063em;
+}
+
+meta.foundation-mq-xlarge {
+  font-family: "/only screen and (min-width:90.063em)/";
+  width: 90.063em;
+}
+
+meta.foundation-mq-xxlarge {
+  font-family: "/only screen and (min-width:120.063em)/";
+  width: 120.063em;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  height: 100%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.hide {
+  display: none;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+select {
+  width: 100%;
+}
+
+/* Panels */
+
+.panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9d9d9;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #f2f2f2;
+}
+
+.panel > :first-child {
+  margin-top: 0;
+}
+
+.panel > :last-child {
+  margin-bottom: 0;
+}
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6,
+.panel p {
+  color: #333333;
+}
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+
+.panel h1.subheader,
+.panel h2.subheader,
+.panel h3.subheader,
+.panel h4.subheader,
+.panel h5.subheader,
+.panel h6.subheader {
+  line-height: 1.4;
+}
+
+.panel.callout {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #baeeff;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #edfbff;
+}
+
+.panel.callout > :first-child {
+  margin-top: 0;
+}
+
+.panel.callout > :last-child {
+  margin-bottom: 0;
+}
+
+.panel.callout h1,
+.panel.callout h2,
+.panel.callout h3,
+.panel.callout h4,
+.panel.callout h5,
+.panel.callout h6,
+.panel.callout p {
+  color: #333333;
+}
+
+.panel.callout h1,
+.panel.callout h2,
+.panel.callout h3,
+.panel.callout h4,
+.panel.callout h5,
+.panel.callout h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+
+.panel.callout h1.subheader,
+.panel.callout h2.subheader,
+.panel.callout h3.subheader,
+.panel.callout h4.subheader,
+.panel.callout h5.subheader,
+.panel.callout h6.subheader {
+  line-height: 1.4;
+}
+
+.panel.callout a {
+  color: #008cba;
+}
+
+.panel.radius {
+  border-radius: 3px;
+}
+
+body {
+  font-family: "open sans";
+}
+
+#semantic-grid-example header {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  *zoom: 1;
+}
+
+#semantic-grid-example header:before,
+#semantic-grid-example header:after {
+  content: " ";
+  display: table;
+}
+
+#semantic-grid-example header:after {
+  clear: both;
+}
+
+#semantic-grid-example header h2 {
+  font-weight: 400;
+}
+
+#semantic-grid-example a {
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+}
+
+#semantic-grid-example .panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9d9d9;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #f2f2f2;
+}
+
+#semantic-grid-example .panel > :first-child {
+  margin-top: 0;
+}
+
+#semantic-grid-example .panel > :last-child {
+  margin-bottom: 0;
+}
+
+#semantic-grid-example .panel h1,
+#semantic-grid-example .panel h2,
+#semantic-grid-example .panel h3,
+#semantic-grid-example .panel h4,
+#semantic-grid-example .panel h5,
+#semantic-grid-example .panel h6,
+#semantic-grid-example .panel p {
+  color: #333333;
+}
+
+#semantic-grid-example .panel h1,
+#semantic-grid-example .panel h2,
+#semantic-grid-example .panel h3,
+#semantic-grid-example .panel h4,
+#semantic-grid-example .panel h5,
+#semantic-grid-example .panel h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+
+#semantic-grid-example .panel h1.subheader,
+#semantic-grid-example .panel h2.subheader,
+#semantic-grid-example .panel h3.subheader,
+#semantic-grid-example .panel h4.subheader,
+#semantic-grid-example .panel h5.subheader,
+#semantic-grid-example .panel h6.subheader {
+  line-height: 1.4;
+}
+
+#semantic-grid-example .grid-wrap {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  *zoom: 1;
+}
+
+#semantic-grid-example .grid-wrap:before,
+#semantic-grid-example .grid-wrap:after {
+  content: " ";
+  display: table;
+}
+
+#semantic-grid-example .grid-wrap:after {
+  clear: both;
+}
+
+#semantic-grid-example .grid-wrap .one,
+#semantic-grid-example .grid-wrap .two {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 50%;
+  float: left;
+}
+
+#semantic-grid-example .grid-wrap.example-2 .inner {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
+}
+
+h1 {
+  font-size: 2.25em;
+  line-height: 1.11111em;
+  margin: 0 0 0.66667em 0;
+}
+
+h2 {
+  font-size: 1.875em;
+  line-height: 1.33333em;
+  margin: 0.53333em 0 0.53333em 0;
+}
+
+h3 {
+  font-size: 1.375em;
+  line-height: 1.45455em;
+  margin: 0em 0 0.72727em 0;
+}
+
+h4 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin: 0 0 0.4em 0;
+}
+
+h5 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin: 0 0 0.44444em 0;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 0 0.5em 0;
+}
+
+p,
+pre,
+label {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+}
+
+ol,
+ul {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 0 2em 0;
+}
+
+li {
+  line-height: auto;
+}
+
+li.list-title {
+  list-style: none;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+ul.nobullet {
+  list-style-type: none;
+}
+
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+em,
+i,
+q {
+  font-style: italic;
+}
+
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid grey;
+  line-height: normal;
+  margin: 0;
+}
+
+blockquote p {
+  font-style: italic;
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin: 1.2em 0 1.2em 0;
+}
