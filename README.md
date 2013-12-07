@@ -1,9 +1,11 @@
 
 
-# Red Eye
+# Ristretto 
 
 #### A Starter Kit & Styleboard
-Eye opening essentials to get you up and out the door in a hurry. Red Eye puts the essentials at your fingertips with an emphasis on typography-without weighing down your stylesheet:
+Eye opening essentials to get you up and out the door in a hurry. Ristretto is a straight shot of essentials with lush overtones of typography and semantic markup. 
+
+Powerful. Lightweight. Ristretto.
 
 - [Foundation 5](http://foundation.zurb.com/docs/)
 - [Compass](http://compass-style.org/)
