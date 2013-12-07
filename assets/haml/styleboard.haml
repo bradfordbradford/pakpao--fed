@@ -13,7 +13,7 @@
 
         %meta{:charset => "utf-8"}
 
-        %title Style Tile
+        %title Red Eye | Welcome
         %meta{:name => "description", :content => ""}
         -# %meta{:name => "keywords", :content => ""}
         -# %meta{:name => "author", :content => ""}
@@ -28,10 +28,10 @@
         %link{:href => "/favicon.ico", :rel => "shortcut icon"}
 
         -# CSS
-        %link{:rel => "stylesheet", :href => "/assets/css/site.css"}
+        %link{:rel => "stylesheet", :href => "../css/app.css"}
 
         -# /[if (lt IE 9) & (!IEMobile)]
-            %script{:src => "/assets/js/libs/selectivizr.min.js"}
+            %script{:src => "../js/libs/ie.min.js"}
             -# %link{:rel => "stylesheet", :href => "/css/ie8.css"}
 
         -# Typekit
@@ -40,7 +40,7 @@
             try{Typekit.load();}catch(e){}
 
         -# Modernizr
-        %script{:src => "/assets/js/libs/modernizr-2.6.2.min.js"}
+        %script{:src => "../../bower_components/modernizr/modernizr.js"}
 
     %body.styletile
 
@@ -48,7 +48,7 @@
 
             %header.site-header
                 .wrap-inner
-                    %h3.name Client Name
+                    %h1.name Client Name
                     %p.note Version 1.0
 
 
@@ -111,7 +111,7 @@
                                     Lee Harvey Oswald was accused of the crime and arrested that evening, but Jack Ruby shot and killed him two days later, before a trial could take place.
 
                                 %br/
-                                %img{:src => "/assets/img/superfamous.jpg", :alt => ""}/
+                                %img{:src => "../img/superfamous.jpg", :alt => ""}/
                                 %br/
                                 %br/
 
@@ -137,7 +137,11 @@
 
 
         %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"}
-        // window.jQuery || document.write('<script src="/js/jquery-1.10.1.min.js"><\/script>')
+        // window.jQuery || document.write('<script src="bower_components/jquery/jquery.min.js../../bower_components/jquery/jquery.min.js"><\/script>')
+
+        %script{:src => "../js/app.js"}
+
+
 
         -# Asynchronous Google Analytics
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

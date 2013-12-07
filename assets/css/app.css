@@ -6,7 +6,7 @@
 * Docs at http://davidtheclark.github.io/scut
 */
 
-#semantic-grid-example p {
+#semantic-grid-example p.scut-hanging {
   padding-left: 1em;
   text-indent: -1em;
 }
@@ -253,132 +253,16 @@ select {
   border-radius: 3px;
 }
 
-body {
-  font-family: "open sans";
-}
-
-#semantic-grid-example header {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 62.5rem;
-  *zoom: 1;
-}
-
-#semantic-grid-example header:before,
-#semantic-grid-example header:after {
-  content: " ";
-  display: table;
-}
-
-#semantic-grid-example header:after {
-  clear: both;
-}
-
-#semantic-grid-example header h2 {
-  font-weight: 400;
-}
-
-#semantic-grid-example a {
-  -webkit-transition: -webkit-transform 1s;
-  transition: transform 1s;
-}
-
-#semantic-grid-example .panel {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d9d9d9;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  background: #f2f2f2;
-}
-
-#semantic-grid-example .panel > :first-child {
-  margin-top: 0;
-}
-
-#semantic-grid-example .panel > :last-child {
-  margin-bottom: 0;
-}
-
-#semantic-grid-example .panel h1,
-#semantic-grid-example .panel h2,
-#semantic-grid-example .panel h3,
-#semantic-grid-example .panel h4,
-#semantic-grid-example .panel h5,
-#semantic-grid-example .panel h6,
-#semantic-grid-example .panel p {
-  color: #333333;
-}
-
-#semantic-grid-example .panel h1,
-#semantic-grid-example .panel h2,
-#semantic-grid-example .panel h3,
-#semantic-grid-example .panel h4,
-#semantic-grid-example .panel h5,
-#semantic-grid-example .panel h6 {
-  line-height: 1;
-  margin-bottom: 0.625rem;
-}
-
-#semantic-grid-example .panel h1.subheader,
-#semantic-grid-example .panel h2.subheader,
-#semantic-grid-example .panel h3.subheader,
-#semantic-grid-example .panel h4.subheader,
-#semantic-grid-example .panel h5.subheader,
-#semantic-grid-example .panel h6.subheader {
-  line-height: 1.4;
-}
-
-#semantic-grid-example .grid-wrap {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 62.5rem;
-  *zoom: 1;
-}
-
-#semantic-grid-example .grid-wrap:before,
-#semantic-grid-example .grid-wrap:after {
-  content: " ";
-  display: table;
-}
-
-#semantic-grid-example .grid-wrap:after {
-  clear: both;
-}
-
-#semantic-grid-example .grid-wrap .one,
-#semantic-grid-example .grid-wrap .two {
-  position: relative;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 50%;
-  float: left;
-}
-
-#semantic-grid-example .grid-wrap.example-2 .inner {
-  position: relative;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 33.33333%;
-  float: left;
-}
-
 h1 {
   font-size: 2.25em;
   line-height: 1.11111em;
-  margin: 0 0 0.66667em 0;
+  margin: 0 0 0.44444em 0;
 }
 
 h2 {
   font-size: 1.875em;
   line-height: 1.33333em;
-  margin: 0.53333em 0 0.53333em 0;
+  margin: 0.26667em 0 0.26667em 0;
 }
 
 h3 {
@@ -428,6 +312,11 @@ li.list-title {
   list-style: none;
 }
 
+article p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
 ul {
   list-style-position: inside;
   list-style-type: disc;
@@ -466,4 +355,125 @@ blockquote p {
   font-size: 1.25em;
   line-height: 1.2em;
   margin: 1.2em 0 1.2em 0;
+}
+
+body {
+  font-family: "open sans";
+}
+
+#semantic-grid-example header {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  *zoom: 1;
+}
+
+#semantic-grid-example header:before,
+#semantic-grid-example header:after {
+  content: " ";
+  display: table;
+}
+
+#semantic-grid-example header:after {
+  clear: both;
+}
+
+#semantic-grid-example header h2 {
+  font-weight: 400;
+}
+
+#semantic-grid-example .panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9d9d9;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #f2f2f2;
+}
+
+#semantic-grid-example .panel > :first-child {
+  margin-top: 0;
+}
+
+#semantic-grid-example .panel > :last-child {
+  margin-bottom: 0;
+}
+
+#semantic-grid-example .panel h1,
+#semantic-grid-example .panel h2,
+#semantic-grid-example .panel h3,
+#semantic-grid-example .panel h4,
+#semantic-grid-example .panel h5,
+#semantic-grid-example .panel h6,
+#semantic-grid-example .panel p {
+  color: #333333;
+}
+
+#semantic-grid-example .panel h1,
+#semantic-grid-example .panel h2,
+#semantic-grid-example .panel h3,
+#semantic-grid-example .panel h4,
+#semantic-grid-example .panel h5,
+#semantic-grid-example .panel h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+
+#semantic-grid-example .panel h1.subheader,
+#semantic-grid-example .panel h2.subheader,
+#semantic-grid-example .panel h3.subheader,
+#semantic-grid-example .panel h4.subheader,
+#semantic-grid-example .panel h5.subheader,
+#semantic-grid-example .panel h6.subheader {
+  line-height: 1.4;
+}
+
+#semantic-grid-example .ap-transition {
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+  cursor: pointer;
+}
+
+#semantic-grid-example .ap-transition:hover {
+  background: #ebebeb;
+}
+
+#semantic-grid-example .grid-wrap {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  *zoom: 1;
+}
+
+#semantic-grid-example .grid-wrap:before,
+#semantic-grid-example .grid-wrap:after {
+  content: " ";
+  display: table;
+}
+
+#semantic-grid-example .grid-wrap:after {
+  clear: both;
+}
+
+#semantic-grid-example .grid-wrap .one,
+#semantic-grid-example .grid-wrap .two {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 50%;
+  float: left;
+}
+
+#semantic-grid-example .grid-wrap.example-2 .inner {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
 }
