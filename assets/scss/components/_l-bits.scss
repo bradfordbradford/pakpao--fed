@@ -1,0 +1,18 @@
+
+
+// Social Icon List
+aside.social {
+    float:right;
+    margin:0;
+    padding:0 24px;
+    a {
+        padding:0 4px;
+        color: $key;
+        border:0;
+        line-height:80px;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}

@@ -1,0 +1,301 @@
+
+// ** Flexnav Base Styles ** //
+
+
+.flexnav {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    transition: none;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 0;
+
+  &.opacity {
+    opacity: 0;
+  }
+
+    &.flexnav-show {
+        max-height: 2000px;
+        opacity: 1;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+
+    li {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    li a {
+        position: relative;
+        display: block;
+        z-index: 2;
+        overflow: hidden;
+        color: $primary;
+        background: $key;
+        @include scut-vcenter-lh(80px);
+        @include navigation-font();
+        text-align: center;
+        padding: 0 14px;
+        font-weight: 800;
+        font-size: 14px;
+    }
+
+    li ul {
+        width: 100%;
+        margin-bottom: 0;
+
+        li {
+            font-size: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+    li ul.flexnav-show {
+
+        li {
+            overflow: visible;
+        }
+    }
+
+    // Sub Items
+    li ul li a {
+        line-height: 16px !important;
+        padding: 10px;
+        height: auto;
+        font-size: 12px;
+        border-bottom-color: #E7E7E7;
+    }
+    ul li ul li a {
+        background: $key;
+    }
+    ul li ul li ul li a {
+        background: $key;
+    }
+
+    .touch-button {
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        text-align: center;
+        margin-right: 6px;
+
+        &:hover {
+            cursor: pointer;
+            .navicon {
+                color: $secondary;
+            }
+        }
+        .navicon {
+            position: relative;
+            // top: 1.4em;
+            line-height:46px;
+            font-size: 12px;
+            color: #AA1D49;
+        }
+    }
+}
+
+.menu-button {
+    cursor: pointer;
+    float:right;
+
+    .icon {
+        font-size: 24px;
+        color: $primary;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        line-height: 80px;
+        margin: 0 24px 0 0;
+        display: inline-block;
+    }
+    .touch-button {
+        // @include scut-vcenter-lh(80px);
+        // background: transparent;
+        // position: absolute;
+        // z-index: 999;
+        // top: 0;
+        // right: 0;
+        // width: 50px;
+        // height: 50px;
+        // display: inline-block;
+        // text-align: center;
+
+        .navicon {
+            text-indent: -9999px;
+            display: block;
+            // font-size: 16px;
+            // position: relative;
+            // top: 1em;
+            // color: #666;
+        }
+    }
+}
+
+@media all and (min-width: 800px) {
+
+    header#site-header nav#site-navigation .flexnav {
+        overflow: visible;
+        &.opacity {
+          opacity: 1;
+        }
+
+        li {
+            position: relative;
+            list-style: none;
+            // float: left;
+            // display: block;
+            overflow: visible;
+            display: inline-block;
+            // text-align: center;
+            // width: 10%;
+
+            &.item-with-ul {
+                padding-right: 12px;
+            }
+        }
+
+        .touch-button .navicon {line-height:78px;}
+
+        // li a {
+        //     @include scut-vcenter-lh(52px);
+        //     text-transform: uppercase;
+        //     letter-spacing: .05em;
+        //     font-weight: 800;
+        //     font-size: 14px;
+        // }
+        li > ul {
+            position: absolute;
+            top: auto;
+            left: 0;
+
+            li {
+                width: 100%;
+                float:left;
+            }
+        }
+        li ul li > ul {
+            margin-left: 100%;
+            top: 0;
+        }
+        li ul li:hover > ul,
+        li ul li > ul.flexnav-show {
+        }
+        li ul li a {
+            line-height: 16px !important;
+            padding: 10px;
+            height: auto;
+            font-size: 12px;
+            border-bottom-color: #E7E7E7;
+        }
+        li ul.open {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+            li {
+                overflow: visible;
+                max-height: 100px;
+            }
+            ul.open {
+                margin-left: 100%;
+                top: 0;
+            }
+        }
+    }
+    .menu-button {
+        display: none;
+    }
+
+
+}
+
+.oldie {
+    body.one-page {
+        padding-top: 70px;
+    }
+    .flexnav {
+        overflow: visible;
+        &.one-page {
+            top: 0;
+            right: auto;
+            max-width: 1080px;
+        }
+        li {
+            position: relative;
+            list-style: none;
+            float: left;
+            display: block;
+            background-color: #a6a6a2;
+            width: 20%;
+            min-height: 50px;
+            overflow: visible;
+        }
+        li:hover > ul {
+            display: block;
+            width: 100%;
+            overflow: visible;
+            li {
+                width: 100%;
+                float: none;
+            }
+        }
+        li a {
+            overflow: visible;
+        }
+        li > ul {
+            background:#acaca1;
+            position: absolute;
+            top: auto;
+            left: 0;
+            display: none;
+            z-index: 1;
+            overflow: visible;
+        }
+        li ul li ul {
+            top: 0;
+        }
+        li ul li a {
+            line-height: 16px !important;
+            padding: 10px;
+            height: auto;
+            font-size: 12px;
+            border-bottom-color: #E7E7E7;
+        }
+        li ul.open {
+            display: block;
+            width: 100%;
+            overflow: visible;
+            li {
+                width: 100%;
+            }
+            ul.open {
+                margin-left: 100%;
+                top: 0;
+                display: block;
+                width: 100%;
+                overflow: visible;
+            }
+        }
+        ul li:hover ul {
+            margin-left: 100%;
+            top: 0;
+        }
+    }
+    .menu-button {
+        display: none;
+    }
+    &.ie7 .flexnav li {
+        width: 19.9%;
+    }
+}

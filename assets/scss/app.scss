@@ -14,21 +14,28 @@
 
     // SUSY
     ,"susy"
-    ,"telegraph-components/l-grid"
+    ,"components/l-grid"
 
 
     // FOUNDATION
-    // ,"foundation-settings"
-    // ,"foundation"
+    // ,"foundation/foundation-settings"
+    // ,"foundation/foundation"
 
     // TELEGRAPH
-    ,"telegraph-settings"
-    ,"telegraph-components/mixins"
-    ,"telegraph-components/typography"
-    ,"telegraph-components/l-blocks"
-    ,"telegraph-components/l-bits"
-    ,"telegraph-components/l-rwd"
-    ,"telegraph-components/l-flexnav"
+    ,"settings"
+    ,"components/mixins"
+    ,"components/typography"
+    ,"components/l-blocks"
+    ,"components/l-bits"
+    ,"components/l-rwd"
+    ,"components/l-flexnav"
 
-    ,"telegraph-components/susy-grid-example"
+    // ,"components/susy-grid-example"
     ;
+
+
+// Project Index
+body.project-index {
+    background: white;
+    @include container;
+}

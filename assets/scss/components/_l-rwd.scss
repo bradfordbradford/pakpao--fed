@@ -1,0 +1,75 @@
+
+
+
+// ** RWD Layouts ** //
+// All in one place to keep file-size in check
+
+
+
+
+@mixin breakpoint($point) {
+  @if $point == break-small {
+    // Above 1600px
+    @media (min-width: 1600px) { @content; }
+  }
+  // Below 880px
+  @else if $point == break-med {
+    @media (max-width: 780px) { @content; }
+  }
+  // Below
+  // @else if $point == break-lrg {
+  //   @media (max-width: 650px)  { @content; }
+  // }
+}
+
+
+
+@include breakpoint(break-med) {
+
+  // ** Site Header Navigation ** //
+  // Mobile Nav - Block list
+  header#site-header nav#site-navigation {
+    height: auto;
+  }
+  header#site-header nav#site-navigation ul > li, header#site-header nav#site-navigation ul > li a {
+    display: block;
+  }
+
+  // Mobile Nested Lists Typography
+  header#site-header nav#site-navigation ul > li a {
+    @include scut-vcenter-lh(20px);
+    padding: 10px;
+  }
+  header#site-header nav#site-navigation .flexnav {
+
+      > li:first-child a {
+          padding-top:12px;
+          border-top: 1px solid $primary;
+      }
+      li:last-child a {
+          padding-bottom:12px;
+      }
+
+      li ul {
+        border-top: 1px solid darken($key, 10%);
+        border-bottom: 1px solid darken($key, 10%);
+        a {
+          color: darken($key, 24%);
+        }
+      }
+  }
+
+
+  // ** Site Footer ** //
+  footer#site-footer {
+    height: auto;
+    .wrap-inner {
+      @include clearfix;
+      padding:9px 24px;
+      text-align: center;
+     }
+  }
+
+
+
+}

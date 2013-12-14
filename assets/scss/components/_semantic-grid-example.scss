@@ -1,0 +1,46 @@
+// Grid Test
+
+#semantic-grid-example {
+    font-family: "open sans";
+
+    header {
+        @include grid-row();
+        h2 {font-weight: 400;}
+    }
+
+    // Scut Example
+    p.scut-hanging {
+        @extend %scut-hanging-indent;
+    }
+
+    .panel {
+        @include panel();
+    }
+
+    // Autoprefix Example
+    .ap-transition {
+        transition: background .15s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background:darken(#fff, 8%);
+        }
+    }
+
+    // Semantic Example
+    .grid-wrap {
+        @include grid-row();
+
+        .one,.two {
+            @include grid-column(6);
+        }
+
+        &.example-2 {
+            .inner {
+                @include grid-column(4);
+            }
+        }
+
+
+    }
+}

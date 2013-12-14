@@ -1,0 +1,218 @@
+
+
+
+// ** Layout Blocks **
+// Blocks & Macro Patterns of Content //
+
+
+
+
+// General Layout ------------------
+body,html {height:100%;}
+
+body {
+    position: relative;
+    font-family: $sans;
+    background: $primary url('../img/bg-wood.jpg');
+    background-size: 336px 336px;
+    &:before { // Keep footer pinned down
+        content: "";
+        height: 100%;
+        float: left;
+        width: 0;
+        margin-top: -32767px;
+
+    }
+}
+
+.content-row {
+    @include clearfix;
+}
+
+.inner-wrap {
+    @include container;
+}
+
+
+
+// Site Header Layout ------------------
+header#site-header {
+    // background: $key;
+    // overflow: hidden;
+    // height: 80px;
+    // position: relative;
+
+    // Header
+    .name {
+        margin:0;
+        height: 80px;
+        width: 100px;
+        float:left;
+        position: relative;
+        background:$primary;
+
+        .pakpaothai {
+            display: block;
+            text-indent: -9999px;
+            margin-top: -38px;
+        }
+
+        img {width: 74%; margin: 12px auto;}
+        img.primary {display:block;}
+        img.secondary {display:none;}
+
+        &:hover {
+            background: $secondary;
+            img.primary {display:none;}
+            img.secondary {display:block;}
+        }
+    }
+
+    // Navigation
+    nav#site-navigation {
+        @include clearfix;
+        overflow: visible;
+        width: 100%;
+        height: 80PX;
+        background: $key;
+        text-align: center;
+
+        // Hide Social on $lg
+        // aside.social {
+        //     display: none;
+        // }
+
+        // Override Hiding Nav on Mobile
+        // .flexnav {
+        //     opacity: 1 !important;
+        //     max-height:2000px !important;
+        // }
+    }
+
+    // nav#site-navigation {
+    //     background: $key;
+    //     text-align: center;
+    //     padding:0 24px;
+
+    //     ul {
+    //         @include scut-list-inline(1em);
+    //         @include nobullet;
+    //         vertical-align: middle;
+
+
+    //         > li a {
+    //             // @include scut-link-bb(inherit, solid, 10px);
+    //             // padding-bottom: 32px;
+    //             @include scut-vcenter-lh(80px);
+    //             text-transform: uppercase;
+    //             letter-spacing: .05em;
+    //             font-weight: 800;
+    //             font-size: 14px;
+    //         }
+
+    //         > li.current a, > li a:hover {
+    //             // padding-bottom: 24px;
+    //         }
+
+    //         // li.drop {
+    //         //     position: relative;
+
+    //         //     a.title {
+    //         //         padding-right:12px;
+
+    //         //         &:after {
+    //         //             position: absolute;
+    //         //             content: '';
+    //         //             @include scut-triangle(down, 8px 8px, $primary);
+    //         //             @include scut-center-absolutely(n .7em);
+    //         //             margin-left: 6px;
+    //         //         }
+
+    //         //         &:hover:after {
+    //         //             border-top-color: $secondary;
+    //         //         }
+
+    //         //     }
+    //         //     ul.f-dropdown {
+    //         //         width:inherit;
+    //         //         li {
+    //         //             margin: 0;
+    //         //             a {
+    //         //                 width:198px;
+    //         //                 height: auto;
+    //         //                 line-height: 16px;
+    //         //                 padding: 16px 12px;
+    //         //                 border-bottom-color: darken($key, 10%);
+    //         //             }
+    //         //             &:last-child a {
+    //         //                 border-bottom: 0;
+    //         //             }
+    //         //         }
+    //         //     }
+
+    //         // }
+    //     }
+    // }
+
+
+}
+
+
+#header-content-wrap {
+    min-height: 100%; // Keep footer pinned down
+}
+
+
+// Site Page Content Layout ------------------
+#page-wrap {
+    @include span-columns(6 omega, 12);
+    min-height: 482px;
+    padding: rhythm(10, 36px) rhythm(20, 36px);
+    background: $primary;
+    border-top: 1px solid darken($primary, 5%);
+    border-left: 1px solid darken($primary, 5%);
+    color:$key;
+
+    h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight:400;
+    }
+}
+
+
+
+// Site Footer Layout ------------------
+footer#site-footer {
+    background: $secondary;
+    width: 100%;
+    height: 44px;
+    clear: both;
+    position: relative;
+    margin-top: -44px;
+    color: $key;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 400;
+    font-size: 14px;
+
+    .wrap-inner {
+        padding: 9px 24px 0;
+
+        &, a {line-height: 32px;}
+
+        .address {
+            float: left;
+            text-align:left;
+        }
+
+        aside.social a:hover {
+            color: $primary;
+        }
+
+
+    }
+}
+
+
+

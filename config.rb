@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-add_import_path "bower_components/foundation/scss"
+# add_import_path "bower_components/foundation/scss"
 
 # SCUT
 require "scut"
@@ -11,21 +11,21 @@ require "susy"
 require 'autoprefixer-rails'
 
 # Run this instead of block below to compress code
-# require 'csso'
-
-# on_stylesheet_saved do |file|
-#   css = File.read(file)
-#   File.open(file, 'w') do |io|
-#     io << Csso.optimize( AutoprefixerRails.compile(css) )
-#   end
-# end
+require 'csso'
 
 on_stylesheet_saved do |file|
   css = File.read(file)
   File.open(file, 'w') do |io|
-    io << AutoprefixerRails.compile(css)
+    io << Csso.optimize( AutoprefixerRails.compile(css) )
   end
 end
+
+# on_stylesheet_saved do |file|
+#   css = File.read(file)
+#   File.open(file, 'w') do |io|
+#     io << AutoprefixerRails.compile(css)
+#   end
+# end
 
 
 

@@ -1,0 +1,96 @@
+#susy-grid-example {
+    background: white;
+
+
+    #grid-test {
+        margin-top:40px;
+        @include container($total-columns);
+    }
+
+    .block{
+        background: rgba(170, 29, 73, 0.42);
+        height:140px;
+    }
+
+    .row {
+        @include clearfix;
+        margin-top: 24px;
+    }
+
+    .header {
+        background: rgba(170, 29, 73, 0.82);
+        height:80px;
+        margin-left: -$gutter-width;
+        margin-right: -$gutter-width;
+
+        .inner-wrap {
+            margin-left:$gutter-width;
+            margin-right:$gutter-width;
+        }
+        .name {
+            @include span-columns(2,$total-columns);
+            height:80px;
+            background: rgba(250,250,250, .5);
+        }
+        ul {
+            @include span-columns(8,$total-columns);
+            @include scut-list-inline(.62em);
+            @include nobullet;
+            background: rgba(250,250,250, .5);
+
+        }
+        .social {
+            background: rgba(250,250,250, .5);
+            @include span-columns(2 omega,$total-columns);
+            height:80px;
+        }
+    }
+
+    .footer {
+        @include clearfix;
+        background: rgba(170, 29, 73, 0.82);
+        height:40px;
+        margin-top: 40px;
+        margin-left: -$gutter-width;
+        margin-right: -$gutter-width;
+    }
+
+    .block.one {
+        @include span-columns(1,$total-columns);
+        &.last {
+            @include span-columns(1 omega,$total-columns);
+        }
+    }
+
+
+    .block.two {
+        @include span-columns(6,$total-columns);
+        &.last {
+            @include span-columns(6 omega,$total-columns);
+        }
+    }
+
+    .block.three {
+        @include span-columns(6,$total-columns);
+        &.last {
+            @include span-columns(6 omega,$total-columns);
+        }
+    }
+
+
+    .block.four {
+        @include span-columns(3,$total-columns);
+        &.last {
+            @include span-columns(3 omega,$total-columns);
+        }
+    }
+
+    .block.two-sm {
+        @include span-columns(3,$total-columns);
+    }
+    .block.two-lg {
+        @include span-columns(9 omega,$total-columns);
+    }
+
+}
+
