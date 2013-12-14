@@ -1,0 +1,148 @@
+!!! 5
+
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+-# <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+-# <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+-# <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+-# <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+%html.no-js{:lang => "en"}
+
+    %head
+
+        %meta{:charset => "utf-8"}
+
+        %title PAKPAO •
+        %meta{:name => "description", :content => ""}
+        %meta{:name => "keywords", :content => ""}
+        %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+        -# RSS
+        -# %link{:rel => "alternate", :type => "application/rss+xml", :title => "RSS", :href => "http://feeds.feedburner.com/FEEDNAME"}
+
+        -# Favicon
+        %link{:href => "../img/favicon.ico", :rel => "shortcut icon"}
+
+        -# CSS
+        %link{:rel => "stylesheet", :href => "../css/app.css"}
+        %link{:rel => "stylesheet", :href => "../fonts/ss-social/webfonts/ss-social.css"}
+
+        -# /[if (lt IE 9) & (!IEMobile)]
+            %script{:src => "../js/libs/ie.min.js"}
+            -# %link{:rel => "stylesheet", :href => "/css/ie8.css"}
+
+        -# Typekit
+        %script{:src => "http://use.typekit.com/agl8hhk.js"}
+        %script
+            try{Typekit.load();}catch(e){}
+
+        -# Modernizr
+        %script{:src => "../../bower_components/modernizr/modernizr.js"}
+
+    %body#susy-grid-example
+        -# General Layout
+
+        .header
+            .inner-wrap
+                .name
+                    Client Name
+
+                %ul
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+                    %li
+                        %a{:href => ""} Item
+
+                .social
+
+
+
+
+
+
+
+        #grid-test
+            .row
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one block 1
+                .block.one.last block 1 last
+
+            .row
+                .block.two block 1
+                .block.two.last block 1 last
+
+
+            .row
+                .block.two
+                    %h3 block with 2 nested
+                    .block.three block 3
+                    .block.three.last block 3 last
+
+                .block.two.last
+                    %h3 block with 4 nested
+                    .block.four block 4
+                    .block.four block 4
+                    .block.four block 4
+                    .block.four.last block 4 last
+
+
+            .row
+                .block.two
+                    %h3 block with 2 nested
+                    .block.two-sm block 3
+                    .block.two-lg.last block 3 last
+
+                .block.two.last
+                    %h3 block with 4 nested
+                    .block.four block 4
+                    .block.four block 4
+                    .block.four block 4
+                    .block.four.last block 4 last
+
+            .footer
+
+
+        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"}
+        // window.jQuery || document.write('<script src="bower_components/jquery/jquery.min.js../../bower_components/jquery/jquery.min.js"><\/script>')
+
+        %script{:src => "../js/app.js"}
+
+
+
+        -# Asynchronous Google Analytics
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+
+
+

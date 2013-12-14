@@ -6,47 +6,47 @@
 
 // Define your main colour palette
 
-$primarylight                                   : #2ecc71;
-$primary                                        : #27ae60;
-$primarydark                                    : #3f9563;
-$secondary                                      : #2980b9;
-$secondarylight                                 : #41ACD3;
-$secondarydark                                  : #2c3e50;
-$neutral                                        : #868686;
-$neutrallight                                   : #bdc3c7;
-$neutraldark                                    : #212121;
-$key                                            : #cc2e5a;
+// $primarylight                                   : #fff;
+$primary                                        : #AA1D49;
+// $primarydark                                    : #3f9563;
+$secondary                                      : #F08023;
+// $secondarylight                                 : #41ACD3;
+// $secondarydark                                  : #2c3e50;
+// $neutral                                        : #868686;
+// $neutrallight                                   : #bdc3c7;
+// $neutraldark                                    : #212121;
+$key                                            : #fff;
 
 
 // Assign colours to variable roles
 
-$base-color                                     : $secondarydark;
-$heading-color                                  : $secondarylight;
-$secondarylight-heading-color                   : $neutral;
+$base-color                                     : $primary;
+$heading-color                                  : $key;
+$secondarylight-heading-color                   : $secondary;
 
 
 
 // Links
 
-$action                                         : $primarylight;
-$action-respond                                 : darken($primarylight, 10%);
-$secondarylight-action                              : $action-respond;
-$secondarylight-action-respond                      : $action;
+$action                                         : $key;
+$action-respond                                 : $secondary;
+$secondarylight-action                          : $action-respond;
+$secondarylight-action-respond                  : $action;
 
 
 
 // Alerts, errors and UI interface
 
-$alert                                          : #e74c3c;
-$success                                        : $secondarylight;
+$alert                                          : $secondary;
+$success                                        : $key;
 
 
 
 
 // Fonts, measure, leading and typefaces
 // ------------------------------------------------------------
-$sans                                   : "soleil", "Calibri", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$serif                                  : "kepler-std", "Droid Serif", "Cambria", "Georgia", "Times New Roman", "Times", serif;
+$sans                                   : "proxima-nova", "Calibri", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$serif                                  : "Droid Serif", "Cambria", "Georgia", "Times New Roman", "Times", serif;
 
 // Fonts size and line height defaults for our calculations
 

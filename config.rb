@@ -4,6 +4,9 @@ add_import_path "bower_components/foundation/scss"
 # SCUT
 require "scut"
 
+# SUSY
+require "susy"
+
 # AUTOPREFIXER
 require 'autoprefixer-rails'
 
